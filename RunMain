@@ -1,0 +1,39 @@
+package ApplicationControllerPattern;
+import java.util.Scanner;
+
+/**
+ * Created by luceromoreno on 6/1/17.
+ */
+public class RunMain {
+
+    public static void main(String[] args) {
+        for (boolean i = true; i == true; ) {
+            Scanner reader = new Scanner(System.in);
+            System.out.println("\n\n\nWhat do you want to run? " +
+                    "\n 1. Home" +
+                    " \n 2. Services " +
+                    "\n 3. Projects" +
+                    "\n 4. Contact Us" +
+                    " \n 5. Exit");
+            int n = reader.nextInt();
+            Auth auth = new Auth();
+            switch (n) {
+                case (1):
+                    auth.dispatchRequest("Home");
+                    break;
+                case (2):
+                    auth.dispatchRequest("Services");
+                    break;
+                case (3):
+                    auth.dispatchRequest("Projects");
+                    break;
+                case (4):
+                    auth.dispatchRequest("ContactUs");
+                    break;
+                default:
+                    i=false;
+                    break;
+            }
+        }
+    }
+}
