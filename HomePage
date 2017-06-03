@@ -1,0 +1,10 @@
+package ApplicationControllerPattern;
+
+/**
+ * Created by luceromoreno on 6/1/17.
+ */
+public class HomePage {
+    public void show() {
+        System.out.println("This will be the Home/RunMain Page");
+    }
+}
