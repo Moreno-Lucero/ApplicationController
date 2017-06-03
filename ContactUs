@@ -1,0 +1,10 @@
+package ApplicationControllerPattern;
+
+/**
+ * Created by luceromoreno on 6/1/17.
+ */
+public class ContactUs {
+    public void show() {
+        System.out.println("This will display a page for people to contact the company.");
+    }
+}
