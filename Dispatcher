@@ -1,0 +1,38 @@
+package ApplicationControllerPattern;
+
+/**
+ * Created by luceromoreno on 6/1/17.
+ */
+public class Dispatcher {
+        private HomePage homePage;
+        private Services services;
+        private PastProjects pastProjects;
+        private ContactUs contactUs;
+
+        public Dispatcher() {
+            homePage = new HomePage();
+            services = new Services();
+            pastProjects = new PastProjects();
+            contactUs = new ContactUs();
+        }
+
+        public void dispatch(String request) {
+            switch (request) {
+                case ("Home"):
+                    homePage.show();
+                    break;
+                case ("Services"):
+                    services.show();
+                    break;
+                case ("Projects"):
+                    pastProjects.show();
+                case ("ContactUs"):
+                    contactUs.show();
+                    break;
+                default:
+                    homePage.show();
+                    break;
+            }
+        }
+    }
+
