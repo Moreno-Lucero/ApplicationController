@@ -1,0 +1,28 @@
+package ApplicationControllerPattern;
+
+import java.util.HashMap;
+
+/**
+ * Created by luceromoreno on 6/29/17.
+ */
+public class Controller {
+
+
+
+
+        private HashMap<String,Handler> handlerMap = new HashMap();
+
+        public void handleRequest(String command, HashMap<String,Object> data){
+            mapCommand("Contact us", new ContactUs());
+            mapCommand("Home page", new HomePage());
+            mapCommand("Past projects", new PastProjects());
+            mapCommand("Services", new Services());
+            Handler aCommandHandler = handlerMap.get(command);  if (aCommandHandler != null);
+
+        }
+        public void mapCommand(String aCommand, Handler acHandler){
+            handlerMap.put(aCommand,acHandler);
+        }
+
+
+    }
