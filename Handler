@@ -1,0 +1,12 @@
+package ApplicationControllerPattern;
+import java.util.HashMap;
+
+/**
+ * Created by luceromoreno on 6/29/17.
+ */
+public class Handler {
+
+    public interface Handling {
+        public void handle(HashMap<String, Object> data);
+    }
+}
