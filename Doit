@@ -1,0 +1,33 @@
+package ApplicationControllerPattern;
+import java.util.HashMap;
+import java.util.Scanner;
+
+/**
+ * Created by luceromoreno on 6/29/17.
+ */
+public class Doit {
+
+
+
+
+        public static void main (String[] args){
+            Controller controlla = new Controller();
+
+            Scanner input = new Scanner(System.in);
+
+            System.out.print("Which view would you like to see? ");
+
+            String stop = input.nextLine();
+            HashMap go = new HashMap();
+            go.put("command", stop);
+
+            //use the controllers to get the tagline for the show the user entered.
+            try {
+                controlla.handleRequest((String)go.get("command"),go );
+            }catch(Exception e){
+                e.printStackTrace();
+                System.out.println("That vieew does not exist.");
+            }
+
+        }
+    }
