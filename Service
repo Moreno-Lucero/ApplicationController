@@ -1,0 +1,11 @@
+package ApplicationControllerPattern;
+import java.util.HashMap;
+
+/**
+ * Created by luceromoreno on 6/29/17.
+ */
+public class Services {
+        public void handle(HashMap<String, Object> dataMap) {
+            System.out.println("This is the services view");
+        }
+    }
